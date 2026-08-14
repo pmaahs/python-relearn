@@ -5,4 +5,4 @@ while number > 1:
         number //= 2
     else:
         number = number*3+1
-print("1")
+print(number)

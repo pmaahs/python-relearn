@@ -1,0 +1,9 @@
+sentence = input("Enter a sentence or paragraph ").lower().split()
+wordcounter = {}
+for word in sentence:
+    if word not in wordcounter:
+        wordcounter[word]=1
+    elif word in wordcounter:
+        wordcounter[word]+=1
+for word in wordcounter:
+    print(f"{word} appears {wordcounter[word]} times")
