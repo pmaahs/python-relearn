@@ -1,16 +1,19 @@
-question = input("Enter a word or sentence to find the number of vowels: ")
-question2 = input("do you want to include y as a vowel? (y/n): ").upper()
-if question2 == "Y":
+word = input("enter a word or sentence: ").upper()
+yorno = input("do you want to include y? (Y or N) ").upper()
+if yorno == "Y":
+    test = "AEIOUY"
     counter = 0
-    for letter in question:
-          if "aeiouy".find(letter.lower()) != -1:
-              counter += 1
-    print(f"There are {counter} vowels in your word or sentence")
-elif question2 == "N":
+    for character in word:
+        if character in test: 
+            counter+=1
+    print(f"There are {counter} vowels in your word/sentence")
+elif yorno == "N":
+    test = "AEIOU"
     counter = 0
-    for letter in question:
-        if "aeiou".find(letter.lower()) != -1:
-            counter += 1
-    print(f"There are {counter} vowels in your word or sentence")
+    for character in word:
+        if test.find(character) != -1:
+            counter +=1
+    print(f"There are {counter} vowels in your word/sentence")
 else:
-    print("Invalid input. Please enter 'y' or 'n'.")
+    print("misinput")
+
