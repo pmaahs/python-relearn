@@ -1,11 +1,8 @@
-length = int(input("how large is your list with duplicates? "))
-dupe = []
-for i in range(length):
-    dupe.append(int(input(f"enter number{i}: ")))
+input_list = [1,2,2,3,3,3,1,6,1,5]
 seen = set()
-ordered = list()
-for i in range(len(dupe)):
-    if dupe[i] not in seen:
-        ordered.append(dupe[i])
-    seen.add(dupe[i])
-print(ordered)
+result = []
+for item in input_list:
+    if item not in seen:
+        result.append(item)
+        seen.add(item)
+print(result)

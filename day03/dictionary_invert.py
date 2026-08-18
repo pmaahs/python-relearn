@@ -1,9 +1,4 @@
-num_items = int(input("How many items? "))
-user_dict = {}
-for i in range(num_items):
-    key = input("Enter key: ")
-    value = input("Enter value: ")
-    user_dict[key] = value
+user_dict = {1: "apple", 2:"banana", 3:"grape"}
 print(f"original dictionary: {user_dict}")
 reverse_dict = {}
 for key, value in user_dict.items():
